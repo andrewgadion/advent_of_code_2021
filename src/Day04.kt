@@ -38,7 +38,7 @@ class Board(data: List<String>) {
                     return true
             }
         }
-        
+
         return false
     }
 }
