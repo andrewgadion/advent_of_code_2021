@@ -5,7 +5,8 @@ import java.io.File
  */
 fun readInput(name: String) = File("src/input", "$name.txt").readLines()
 
-/**
- * Converts string to md5 hash.
- */
-//fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
+fun String.toIntList(delimiter: String = ","): List<Int> =
+    this.split(delimiter)
+        .map(String::trim)
+        .filter(String::isNotEmpty)
+        .map(String::toInt)
