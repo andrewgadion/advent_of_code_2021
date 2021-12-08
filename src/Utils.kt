@@ -10,3 +10,7 @@ fun String.toIntList(delimiter: String = ","): List<Int> =
         .map(String::trim)
         .filter(String::isNotEmpty)
         .map(String::toInt)
+
+fun String.sort(): String {
+    return this.toCharArray().sorted().joinToString("")
+}
