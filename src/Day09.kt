@@ -1,7 +1,6 @@
 typealias HeightMap = List<List<Int>>
 typealias HeightPoint = Triple<Int, Int, Int>
 
-fun String.toIntDigits() = this.map(Char::digitToInt)
 fun HeightMap.tryGet(row: Int, col: Int): HeightPoint? =
     if (row in this.indices && col in this[row].indices) HeightPoint(row, col, this[row][col]) else null
 

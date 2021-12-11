@@ -14,3 +14,5 @@ fun String.toIntList(delimiter: String = ","): List<Int> =
 fun String.sort(): String {
     return this.toCharArray().sorted().joinToString("")
 }
+
+fun String.toIntDigits() = this.map(Char::digitToInt)
