@@ -21,3 +21,10 @@ fun String.isLowerCase() = this.all(Char::isLowerCase)
 fun String.isUpperCase() = this.all(Char::isUpperCase)
 
 fun <T> List<T>.hasEqualEntries() = this.distinct().size != this.size
+
+fun String.charFrequency(): Map<Char, Long> {
+    return this.fold(mutableMapOf()) { acc, c ->
+        acc.compute(c) { _, prev -> if (prev == null) 1 else prev + 1}
+        acc
+    }
+}
